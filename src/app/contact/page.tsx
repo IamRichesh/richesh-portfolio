@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { ArrowUpRight, InstagramLogo, LinkedinLogo } from "@phosphor-icons/react/ssr";
-import { socials } from "@/content/profile";
+import { ArrowUpRight, EnvelopeSimple, InstagramLogo, LinkedinLogo } from "@phosphor-icons/react/ssr";
+import { contactEmail, socials } from "@/content/profile";
 import { contactGraph, toJsonLd } from "@/lib/schema";
 import { PageIntro } from "@/components/ui/PageIntro";
 import { MessageComposer } from "@/components/contact/MessageComposer";
@@ -9,13 +9,14 @@ import { PuneClock } from "@/components/contact/PuneClock";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Richesh Yadav, a security operations consultant in Pune, about security operations, incident investigation, SIEM, phishing response, endpoint security and AI security. Best reached via LinkedIn.",
+    "Contact Richesh Yadav, a security operations consultant in Pune, about security operations, incident investigation, SIEM, phishing response, endpoint security and AI security. Reachable by email or LinkedIn.",
   alternates: { canonical: "/contact" },
 };
 
 const channels = [
-  { ...socials[0], Icon: LinkedinLogo, note: "Best for professional conversations" },
-  { ...socials[1], Icon: InstagramLogo, note: "Everything else" },
+  { label: "LinkedIn", handle: socials[0].handle, href: socials[0].href, Icon: LinkedinLogo, note: "Best for professional conversations", external: true },
+  { label: "Email", handle: contactEmail, href: `mailto:${contactEmail}`, Icon: EnvelopeSimple, note: "Direct and to the point", external: false },
+  { label: "Instagram", handle: socials[1].handle, href: socials[1].href, Icon: InstagramLogo, note: "Everything else", external: true },
 ];
 
 export default function ContactPage() {
@@ -42,12 +43,11 @@ export default function ContactPage() {
           </div>
 
           <ul className="grid grid-cols-1 gap-4">
-            {channels.map(({ label, handle, href, Icon, note }) => (
+            {channels.map(({ label, handle, href, Icon, note, external }) => (
               <li key={href} className="reveal">
                 <a
                   href={href}
-                  target="_blank"
-                  rel="noopener noreferrer me"
+                  {...(external ? { target: "_blank", rel: "noopener noreferrer me" } : {})}
                   className="spotlight group flex items-center gap-5 rounded-[1.75rem] border border-line bg-ink-soft/70 p-6 transition-transform duration-200 active:scale-[0.99]"
                 >
                   <span className="grid size-14 shrink-0 place-items-center rounded-2xl border border-line-strong text-signal transition-colors duration-300 group-hover:bg-signal group-hover:text-ink">
@@ -70,7 +70,7 @@ export default function ContactPage() {
           </ul>
 
           <p className="reveal px-2 pt-2 text-sm leading-relaxed text-paper/50">
-            There&apos;s no public email address. LinkedIn messages are the most reliable way to get in touch.
+            Email and LinkedIn are checked most often. Feel free to reach out directly.
           </p>
         </aside>
 

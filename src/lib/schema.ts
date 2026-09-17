@@ -2,6 +2,7 @@ import {
   SITE_URL,
   capabilities,
   certifications,
+  contactEmail,
   experience,
   knowsAbout,
   person,
@@ -115,7 +116,7 @@ export function projectsGraph() {
   };
 }
 
-/** Contact page graph: no public email, so the contact point is LinkedIn messaging. */
+/** Contact page graph: email and LinkedIn are both listed as professional contact points. */
 export function contactGraph() {
   return {
     "@context": "https://schema.org",
@@ -126,11 +127,10 @@ export function contactGraph() {
       "@id": PERSON_ID,
       "@type": "Person",
       name: person.name,
-      contactPoint: {
-        "@type": "ContactPoint",
-        contactType: "professional enquiries",
-        url: socials[0].href,
-      },
+      contactPoint: [
+        { "@type": "ContactPoint", contactType: "professional enquiries", email: contactEmail },
+        { "@type": "ContactPoint", contactType: "professional enquiries", url: socials[0].href },
+      ],
     },
   };
 }

@@ -2,12 +2,14 @@ import {
   SITE_URL,
   capabilities,
   certifications,
+  contactEmail,
   experience,
   navItems,
   person,
   projects,
   socials,
   focus,
+  targetRoles,
 } from "@/content/profile";
 
 export const dynamic = "force-static";
@@ -43,9 +45,14 @@ ${projects.map((p) => `- **${p.title}** (${p.kind}; ${p.status}, ${p.period})${p
 
 ${focus.map((f) => `- ${f.state} / ${f.mode}: **${f.title}** — ${f.line}`).join("\n")}
 
+## Open to
+
+${targetRoles.map((r) => `- ${r}`).join("\n")}
+
 ## Contact
 
-No public email. Reach ${person.name} through LinkedIn messages: ${socials[0].href}
+Email: ${contactEmail}
+LinkedIn: ${socials[0].href}
 
 ## Certifications
 

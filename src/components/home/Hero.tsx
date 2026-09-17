@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { ArrowDownRight, ArrowRight, ArrowUpRight } from "@phosphor-icons/react/ssr";
-import { person } from "@/content/profile";
+import { ArrowDownRight, ArrowRight, ArrowUpRight, DownloadSimple } from "@phosphor-icons/react/ssr";
+import { person, targetRoles } from "@/content/profile";
 
 const signals = [
   { k: "ROLE", v: "Consultant · Eviden" },
@@ -53,13 +53,30 @@ export function Hero() {
             >
               Start a conversation
             </Link>
+            <a
+              href="/resume.pdf"
+              download="Richesh_Yadav_Resume.pdf"
+              className="inline-flex items-center gap-2 rounded-xl border border-line-strong px-5 py-3 text-sm font-medium text-paper transition-[transform,border-color,background-color] duration-200 hover:border-signal/60 hover:bg-signal/5 active:scale-[0.97]"
+            >
+              Download résumé
+              <DownloadSimple size={16} weight="bold" aria-hidden="true" />
+            </a>
+          </div>
+
+          <div className="rise mt-8 flex flex-wrap items-center gap-2" style={{ "--i": 5 } as React.CSSProperties}>
+            <span className="font-mono text-[10px] tracking-[0.18em] text-muted">OPEN TO</span>
+            {targetRoles.map((role) => (
+              <span key={role} className="rounded-full border border-line-strong px-3 py-1 text-xs text-paper/70">
+                {role}
+              </span>
+            ))}
           </div>
         </div>
 
         <aside
           aria-label="Status"
           className="rise glass hidden rounded-2xl p-5 lg:block"
-          style={{ "--i": 5 } as React.CSSProperties}
+          style={{ "--i": 6 } as React.CSSProperties}
         >
           <p className="flex items-center justify-between font-mono text-[10px] tracking-[0.18em] text-muted">
             <span>OPERATOR STATUS</span>

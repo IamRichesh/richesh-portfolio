@@ -59,9 +59,12 @@ export default function AboutPage() {
             Four chapters, newest first. Each one added a layer: platform health, then investigation at volume, then
             response ownership, and now building.
           </p>
-          <div className="reveal mt-8">
+          <div className="reveal mt-8 flex flex-wrap gap-3">
             <ArrowLink href={socials[0].href} external variant="ghost">
               Full profile on LinkedIn
+            </ArrowLink>
+            <ArrowLink href="/resume.pdf" external variant="ghost">
+              Download résumé
             </ArrowLink>
           </div>
         </div>

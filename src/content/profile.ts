@@ -30,6 +30,8 @@ export const person = {
   alumniOf: "Swami Ramanand Teerth Marathwada University",
 } as const;
 
+export const contactEmail = "yadavricheshkumar@gmail.com";
+
 export const socials = [
   {
     label: "LinkedIn",
@@ -41,6 +43,14 @@ export const socials = [
     handle: "@richesh_arya",
     href: "https://www.instagram.com/richesh_arya/",
   },
+] as const;
+
+/** Roles worth a conversation now, ordered by how directly they build on current SOC experience. */
+export const targetRoles = [
+  "Generative AI Security Consultant",
+  "Prompt & LLM Security Architect",
+  "Cloud AI Security Specialist",
+  "AI Governance & Compliance Lead",
 ] as const;
 
 export const certifications = [
@@ -236,4 +246,7 @@ export const knowsAbout = [
   "Threat Intelligence",
   "Security Reporting",
   "AI Security",
+  "LLM Security",
+  "Prompt Security",
+  "AI Governance",
 ];
