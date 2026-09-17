@@ -23,7 +23,7 @@ export function PuneClock() {
   const period = hour === null ? null : hour >= 6 && hour < 18 ? "Daytime" : hour >= 18 && hour < 22 ? "Evening" : "Night";
 
   return (
-    <div className="flex flex-wrap items-end justify-between gap-x-6 gap-y-3">
+    <div className="flex items-end justify-between gap-6">
       <div>
         <p className="font-mono text-[10px] tracking-[0.18em] text-muted">LOCAL TIME · PUNE, IST</p>
         <p className="mt-2 text-5xl font-semibold tracking-[-0.04em] tabular" suppressHydrationWarning>

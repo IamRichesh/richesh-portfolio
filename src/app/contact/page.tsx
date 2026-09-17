@@ -36,12 +36,12 @@ export default function ContactPage() {
       />
 
       <div className="grid gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-14">
-        <aside className="grid min-w-0 grid-cols-1 content-start gap-4">
+        <aside className="grid content-start gap-4">
           <div className="reveal rounded-[1.75rem] border border-line bg-ink-soft/70 p-7">
             <PuneClock />
           </div>
 
-          <ul className="grid grid-cols-1 gap-4">
+          <ul className="grid gap-4">
             {channels.map(({ label, handle, href, Icon, note }) => (
               <li key={href} className="reveal">
                 <a
