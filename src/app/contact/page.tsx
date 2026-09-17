@@ -55,7 +55,7 @@ export default function ContactPage() {
                   </span>
                   <span className="min-w-0 flex-1">
                     <span className="block text-2xl font-semibold tracking-[-0.03em]">{label}</span>
-                    <span className="block truncate text-sm text-paper/55">
+                    <span className="block text-sm leading-snug text-paper/55 [overflow-wrap:anywhere]">
                       {handle} · {note}
                     </span>
                   </span>
