@@ -35,8 +35,8 @@ export const contactEmail = "yadavricheshkumar@gmail.com";
 export const socials = [
   {
     label: "LinkedIn",
-    handle: "yadav-richesh-kumar",
-    href: "https://www.linkedin.com/in/yadav-richesh-kumar-733546226/",
+    handle: "richeshkumaryadav",
+    href: "https://www.linkedin.com/in/richeshkumaryadav/",
   },
   {
     label: "Instagram",
