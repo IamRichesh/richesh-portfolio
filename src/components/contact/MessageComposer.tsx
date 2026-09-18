@@ -79,7 +79,7 @@ export function MessageComposer() {
                 type="button"
                 aria-pressed={on}
                 onClick={() => toggle(t)}
-                className={`inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-sm transition-[background-color,border-color,color,transform] duration-200 active:scale-[0.96] ${
+                className={`inline-flex min-h-11 items-center gap-1.5 rounded-full border px-3.5 py-2.5 text-sm transition-[background-color,border-color,color,transform] duration-200 active:scale-[0.96] ${
                   on ? "border-signal bg-signal text-ink" : "border-line-strong text-paper/75 hover:border-signal/50 hover:text-paper"
                 }`}
               >
