@@ -14,15 +14,15 @@ import {
 
 export const dynamic = "force-static";
 
-const month = (ym: string | null) => {
-  if (!ym) return "Present";
-  const [y, m] = ym.split("-").map(Number);
-  if (!m) return String(y);
-  return new Date(Date.UTC(y, m - 1)).toLocaleString("en-GB", { month: "short", year: "numeric", timeZone: "UTC" });
-};
-
 /** llms.txt (llmstxt.org): a clean Markdown brief for LLM agents, built from the same content as the UI. */
 export function GET() {
+  const formatMonth = (ym: string | null) => {
+    if (!ym) return "Present";
+    const [y, m] = ym.split("-").map(Number);
+    if (!m) return String(y);
+    return new Date(Date.UTC(y, m - 1)).toLocaleString("en-GB", { month: "short", year: "numeric", timeZone: "UTC" });
+  };
+
   const body = `# ${person.name}
 
 > ${person.summary}
@@ -35,7 +35,7 @@ ${capabilities.map((c) => `- **${c.term}**: ${c.plain} Tools: ${c.tools.join(", 
 
 ## Experience
 
-${experience.map((e) => `- **${e.role}**, ${e.org} (${month(e.start)} – ${month(e.end)}): ${e.summary}`).join("\n")}
+${experience.map((e) => `- **${e.role}**, ${e.org} (${formatMonth(e.start)} – ${formatMonth(e.end)}): ${e.summary}`).join("\n")}
 
 ## Projects
 

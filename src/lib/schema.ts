@@ -13,11 +13,6 @@ import {
 const PERSON_ID = `${SITE_URL}/#person`;
 const SITE_ID = `${SITE_URL}/#website`;
 
-/**
- * Sitewide JSON-LD graph. Uses Person + ProfilePage (not LocalBusiness): Richesh is an
- * individual professional, and mislabelled entity types reduce trust with search engines.
- * Capabilities are exposed as Service offers so agents can match "who does X" queries.
- */
 export function siteGraph() {
   return {
     "@context": "https://schema.org",
@@ -92,7 +87,6 @@ export function siteGraph() {
   };
 }
 
-/** Work page graph: projects as an ordered list of creative works authored by the Person. */
 export function projectsGraph() {
   return {
     "@context": "https://schema.org",
@@ -116,7 +110,6 @@ export function projectsGraph() {
   };
 }
 
-/** Contact page graph: email and LinkedIn are both listed as professional contact points. */
 export function contactGraph() {
   return {
     "@context": "https://schema.org",
