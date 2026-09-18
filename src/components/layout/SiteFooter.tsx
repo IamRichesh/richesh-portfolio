@@ -12,8 +12,9 @@ const socialIcons = { LinkedIn: LinkedinLogo, Instagram: InstagramLogo };
 
 export function SiteFooter() {
   return (
-    <footer className="glass relative z-10 mt-32 border-x-0 border-b-0">
-      <div className="mx-auto max-w-[1400px] px-4 py-14 md:px-8">
+    <footer className="relative z-10 mx-auto mt-32 max-w-[1400px] px-4 pb-8 md:px-8">
+      <div className="glass overflow-hidden rounded-3xl">
+      <div className="px-4 py-14 md:px-8">
         <div className="flex flex-wrap items-center justify-between gap-6">
           <div>
             <p className="text-lg font-semibold tracking-tight">{person.name}</p>
@@ -60,9 +61,10 @@ export function SiteFooter() {
         </nav>
       </div>
 
-      <div className="mx-auto flex max-w-[1400px] flex-wrap justify-between gap-3 border-t border-line px-4 py-5 font-mono text-[10px] tracking-[0.18em] text-muted md:px-8">
+      <div className="flex flex-wrap justify-between gap-3 border-t border-line px-4 py-5 font-mono text-[10px] tracking-[0.18em] text-muted md:px-8">
         <span>© {new Date().getFullYear()} {person.name.toUpperCase()}</span>
         <span>INVESTIGATE · CONTAIN · REPORT · BUILD</span>
+      </div>
       </div>
     </footer>
   );
