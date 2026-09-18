@@ -58,7 +58,7 @@ export function Hero() {
               download="Richesh_Yadav_Resume.pdf"
               className="inline-flex items-center gap-2 rounded-xl border border-line-strong px-5 py-3 text-sm font-medium text-paper transition-[transform,border-color,background-color] duration-200 hover:border-signal/60 hover:bg-signal/5 active:scale-[0.97]"
             >
-              Download résumé
+              Download resume
               <DownloadSimple size={16} weight="bold" aria-hidden="true" />
             </a>
           </div>

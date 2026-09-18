@@ -64,7 +64,7 @@ export default function AboutPage() {
               Full profile on LinkedIn
             </ArrowLink>
             <ArrowLink href="/resume.pdf" external variant="ghost">
-              Download résumé
+              Download resume
             </ArrowLink>
           </div>
         </div>
