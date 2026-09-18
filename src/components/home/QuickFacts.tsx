@@ -53,7 +53,7 @@ export function QuickFacts() {
 
         <ol className="grid self-start gap-px overflow-hidden rounded-3xl border border-line bg-line sm:grid-cols-2">
           {capabilities.map((c, i) => (
-            <li key={c.id} className="group relative bg-ink/85 p-6 transition-colors duration-300 hover:bg-ink-soft/90 md:p-8">
+            <li key={c.id} className="glass group relative rounded-none p-6 transition-colors duration-300 hover:bg-signal/5 md:p-8">
               <span className="font-mono text-[10px] tracking-[0.2em] text-muted">
                 {String(i + 1).padStart(2, "0")}
               </span>
