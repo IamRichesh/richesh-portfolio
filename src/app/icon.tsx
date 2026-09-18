@@ -1,5 +1,4 @@
 import { ImageResponse } from "next/og";
-import { person } from "@/content/profile";
 
 export const size = { width: 32, height: 32 };
 export const contentType = "image/png";
@@ -16,13 +15,11 @@ export default function Icon() {
           justifyContent: "center",
           background: "#05070a",
           color: "#72f3df",
-          fontFamily: "sans-serif",
-          fontSize: 15,
+          fontSize: 22,
           fontWeight: 700,
-          letterSpacing: -0.5,
         }}
       >
-        {person.initials}
+        ऋ
       </div>
     ),
     size,
