@@ -38,7 +38,7 @@ export default function ServicesPage() {
           <>
             Four disciplines.
             <br />
-            <span className="text-paper/35">One workflow.</span>
+            <span className="text-paper/40">One workflow.</span>
           </>
         }
         lede="Practical skills developed through day-to-day SOC work: platform support, investigation, containment and reporting. Pick a stage to see what happens there."

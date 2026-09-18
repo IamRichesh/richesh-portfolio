@@ -44,7 +44,7 @@ export function QuickFacts() {
           <h2 className="mt-3 text-4xl font-semibold leading-[1.02] tracking-tight md:text-5xl">
             Six disciplines.
             <br />
-            <span className="text-paper/35">One response workflow.</span>
+            <span className="text-paper/40">One response workflow.</span>
           </h2>
           <p className="mt-5 max-w-[40ch] leading-relaxed text-muted">
             Each technical term comes with a plain-language explanation, so anyone — or any assistant — can tell exactly what the work involves.

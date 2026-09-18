@@ -34,7 +34,7 @@ export default function AboutPage() {
           <>
             Built inside the SOC.
             <br />
-            <span className="text-paper/35">Extending toward AI.</span>
+            <span className="text-paper/40">Extending toward AI.</span>
           </>
         }
         lede="From SIEM administration and platform health to alert investigation, phishing response, endpoint containment and operational coordination. The next stage applies that experience to automation and AI security."
@@ -119,7 +119,7 @@ export default function AboutPage() {
         <div className="reveal max-w-[40rem]">
           <h2 id="focus" className="text-[clamp(2rem,4vw,3rem)] font-semibold leading-[1] tracking-[-0.035em]">
             Security operations today.
-            <span className="text-paper/35"> AI security next.</span>
+            <span className="text-paper/40"> AI security next.</span>
           </h2>
           <p className="mt-5 leading-relaxed text-paper/60">
             Keeping investigation fundamentals sharp while building practical AI and automation skills, without

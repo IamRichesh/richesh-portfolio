@@ -27,7 +27,7 @@ export default function WorkPage() {
           <>
             Operational thinking,
             <br />
-            <span className="text-paper/35">made tangible.</span>
+            <span className="text-paper/40">made tangible.</span>
           </>
         }
         lede="Three pieces of work: a live product prototype, a finance tool still taking shape, and an automation that quietly saved analysts time inside a payments SOC."

@@ -27,7 +27,7 @@ export function Hero() {
             className="mt-6 text-[clamp(3.4rem,11vw,10.5rem)] font-semibold leading-[0.86] tracking-[-0.055em]"
           >
             <span className="rise block" style={{ "--i": 1 } as React.CSSProperties}>Richesh</span>
-            <span className="rise block text-paper/35" style={{ "--i": 2 } as React.CSSProperties}>
+            <span className="rise block text-paper/40" style={{ "--i": 2 } as React.CSSProperties}>
               Yadav<span className="text-signal">.</span>
             </span>
           </h1>

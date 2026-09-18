@@ -49,7 +49,7 @@ export function Lifecycle() {
                 tabIndex={selected ? 0 : -1}
                 onClick={() => setActive(i)}
                 className={`group relative px-5 py-6 text-left transition-colors duration-200 md:px-7 md:py-8 [&:nth-child(n+2)]:border-l [&:nth-child(n+2)]:border-line ${
-                  selected ? "text-paper" : "text-paper/45 hover:text-paper/80"
+                  selected ? "text-paper" : "text-paper/60 hover:text-paper/80"
                 }`}
               >
                 {selected && (

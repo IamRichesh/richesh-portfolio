@@ -114,7 +114,7 @@ export function MessageComposer() {
           )}
         </label>
         <label className="block text-sm font-medium" htmlFor={`${id}-org`}>
-          Organisation <span className="font-normal text-paper/45">(optional)</span>
+          Organisation <span className="font-normal text-paper/60">(optional)</span>
           <input
             id={`${id}-org`}
             value={org}

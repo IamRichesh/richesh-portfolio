@@ -30,7 +30,7 @@ export default function ContactPage() {
           <>
             Open to real
             <br />
-            <span className="text-paper/35">conversations.</span>
+            <span className="text-paper/40">conversations.</span>
           </>
         }
         lede="Based in Pune. Open to conversations about security operations, incident investigation, SIEM, phishing response, endpoint security, AI-assisted workflows and the transition into AI security."
