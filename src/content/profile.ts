@@ -21,7 +21,7 @@ export const person = {
     "Richesh Yadav is a security operations consultant at Atos Group (Eviden) who investigates security incidents, runs phishing response, coordinates endpoint containment, and turns findings into clear, decision-ready reports.",
   /** The machine-readable subtitle under the hero headline. */
   statement:
-    "I investigate security incidents, lead phishing response, coordinate endpoint containment and report findings clearly — and I'm now applying that SOC experience to AI security.",
+    "I investigate security incidents, lead phishing response, and coordinate endpoint containment — and I'm building toward AI and LLM security with hands-on AI development experience.",
   education: {
     name: "Swami Ramanand Teerth Marathwada University",
     location: "Nanded, Maharashtra",
@@ -247,6 +247,12 @@ export const knowsAbout = [
   "Security Reporting",
   "AI Security",
   "LLM Security",
+  "Prompt Injection",
+  "Jailbreak Detection",
+  "Adversarial Prompts",
+  "LLM Red Teaming",
+  "AI Threat Modeling",
   "Prompt Security",
   "AI Governance",
+  "AI-Assisted Development",
 ];
