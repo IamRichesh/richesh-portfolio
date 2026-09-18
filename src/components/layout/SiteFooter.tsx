@@ -12,7 +12,7 @@ const socialIcons = { LinkedIn: LinkedinLogo, Instagram: InstagramLogo };
 
 export function SiteFooter() {
   return (
-    <footer className="relative z-10 mt-32 border-t border-line bg-ink/60 backdrop-blur-sm">
+    <footer className="glass relative z-10 mt-32 border-x-0 border-b-0">
       <div className="mx-auto max-w-[1400px] px-4 py-14 md:px-8">
         <div className="flex flex-wrap items-center justify-between gap-6">
           <div>
