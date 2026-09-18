@@ -1,56 +1,65 @@
 import Link from "next/link";
-import { ArrowUpRight } from "@phosphor-icons/react/ssr";
+import { InstagramLogo, LinkedinLogo } from "@phosphor-icons/react/ssr";
 import { navItems, person, socials } from "@/content/profile";
+
+const machineLinks = [
+  { href: "/llms.txt", label: "llms.txt" },
+  { href: "/sitemap.xml", label: "sitemap.xml" },
+  { href: "/robots.txt", label: "robots.txt" },
+];
+
+const socialIcons = { LinkedIn: LinkedinLogo, Instagram: InstagramLogo };
 
 export function SiteFooter() {
   return (
     <footer className="relative z-10 mt-32 border-t border-line bg-ink/60 backdrop-blur-sm">
-      <div className="mx-auto grid max-w-[1400px] gap-12 px-4 py-14 md:grid-cols-[1.4fr_1fr_1fr_1fr] md:px-8">
-        <div className="max-w-sm">
-          <p className="text-lg font-semibold tracking-tight">{person.name}</p>
-          <p className="mt-3 text-sm leading-relaxed text-muted">{person.summary}</p>
-        </div>
+      <div className="mx-auto max-w-[1400px] px-4 py-14 md:px-8">
+        <div className="flex flex-wrap items-center justify-between gap-6">
+          <div>
+            <p className="text-lg font-semibold tracking-tight">{person.name}</p>
+            <p className="mt-2 flex items-center gap-2 font-mono text-[10px] tracking-[0.18em] text-muted">
+              <span className="relative flex size-2">
+                <span className="absolute inset-0 animate-ping rounded-full bg-signal/60 motion-reduce:animate-none" />
+                <span className="relative size-2 rounded-full bg-signal" />
+              </span>
+              OPEN TO CONVERSATIONS
+            </p>
+          </div>
 
-        <nav aria-label="Footer">
-          <h2 className="font-mono text-[10px] tracking-[0.18em] text-muted">SITE</h2>
-          <ul className="mt-4 space-y-2 text-sm">
-            {navItems.map((item) => (
-              <li key={item.href}>
-                <Link href={item.href} className="text-paper/80 transition-colors hover:text-signal">
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        <div>
-          <h2 className="font-mono text-[10px] tracking-[0.18em] text-muted">PROFILES</h2>
-          <ul className="mt-4 space-y-2 text-sm">
-            {socials.map((s) => (
-              <li key={s.href}>
+          <div className="flex items-center gap-2">
+            {socials.map((s) => {
+              const Icon = socialIcons[s.label as keyof typeof socialIcons];
+              return (
                 <a
+                  key={s.href}
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer me"
-                  className="inline-flex items-center gap-1 text-paper/80 transition-colors hover:text-signal"
+                  aria-label={s.label}
+                  className="grid size-11 place-items-center rounded-full border border-line text-paper/80 transition-colors duration-200 hover:border-signal/60 hover:text-signal"
                 >
-                  {s.label} <ArrowUpRight size={12} aria-hidden="true" />
+                  <Icon size={18} aria-hidden="true" />
                 </a>
-              </li>
-            ))}
-          </ul>
+              );
+            })}
+          </div>
         </div>
 
-        <div>
-          <h2 className="font-mono text-[10px] tracking-[0.18em] text-muted">FOR MACHINES</h2>
-          <ul className="mt-4 space-y-2 text-sm">
-            <li><a href="/llms.txt" className="text-paper/80 transition-colors hover:text-signal">llms.txt</a></li>
-            <li><a href="/sitemap.xml" className="text-paper/80 transition-colors hover:text-signal">sitemap.xml</a></li>
-            <li><a href="/robots.txt" className="text-paper/80 transition-colors hover:text-signal">robots.txt</a></li>
-          </ul>
-        </div>
+        <nav aria-label="Footer" className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-line pt-8 text-sm">
+          {navItems.map((item) => (
+            <Link key={item.href} href={item.href} className="text-paper/80 transition-colors hover:text-signal">
+              {item.label}
+            </Link>
+          ))}
+          <span className="hidden h-4 w-px bg-line sm:block" aria-hidden="true" />
+          {machineLinks.map((m) => (
+            <a key={m.href} href={m.href} className="font-mono text-xs text-muted transition-colors hover:text-signal">
+              {m.label}
+            </a>
+          ))}
+        </nav>
       </div>
+
       <div className="mx-auto flex max-w-[1400px] flex-wrap justify-between gap-3 border-t border-line px-4 py-5 font-mono text-[10px] tracking-[0.18em] text-muted md:px-8">
         <span>© {new Date().getFullYear()} {person.name.toUpperCase()}</span>
         <span>INVESTIGATE · CONTAIN · REPORT · BUILD</span>
