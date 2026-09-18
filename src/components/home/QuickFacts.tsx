@@ -15,7 +15,7 @@ export function QuickFacts() {
       <div className="glass overflow-hidden rounded-3xl">
         <div className="grid gap-8 border-b border-line p-6 md:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] md:p-10">
           <div>
-            <p className="font-mono text-[10px] tracking-[0.2em] text-signal">SUMMARY · MACHINE-READABLE</p>
+            <p className="font-mono text-[10px] tracking-[0.2em] text-signal">AT A GLANCE</p>
             <h2 id="quick-facts-title" className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
               Quick facts &amp; capabilities
             </h2>
